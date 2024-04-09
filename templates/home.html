@@ -15,14 +15,14 @@ type="text/css" href="templates/style.css">
     }
     #bn{
       /* width:90%; */
-      height:90vh;
+      height:100vh;
     }
     .container{
-      max-width: 70vh;
+      max-width: 100vh;
       margin:0 auto;
     }
    #end{
-    display:inline;
+    /* display:inline; */
     text-align:center;
    }
     
@@ -30,9 +30,19 @@ type="text/css" href="templates/style.css">
 </head>
 <body>
  <div class="container">
-   <h1 class="text-center">Hello World to this fucking universe</h1>
-   <img id="bn" class="img-fluid" src="https://tse1.mm.bing.net/th?id=OIP.Qw7vlSzRti8jmA072wvxGwHaHa&pid=Api&rs=1&c=1&qlt=95&w=118&h=118">
-   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, sint nihil. Quisquam recusandae ipsum deleniti, corporis, pariatur architecto animi ducimus voluptates adipisci deserunt maxime! Eos expedita laborum libero et repellat, id aliquid error illo!</p>
+   <h1 class="text-center">Hello World to this {{world}} universe</h1>
+   <img id="bn" class="img-fluid" width="90%" src="https://tse1.mm.bing.net/th?id=OIP.Qw7vlSzRti8jmA072wvxGwHaHa&pid=Api&rs=1&c=1&qlt=95&w=118&h=118">
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, sint nihil. Quisquam recusandae ipsum deleniti, corporis, pariatur architecto animi ducimus voluptates adipisci 
+     deserunt maxime! Eos expedita laborum libero et repellat, id aliquid error illo!</p>
+   <br>
+   <hr>
+   <div style="margin-bottom:16px">
+     {%for j in jobs%}
+     {%include 'job_item.html'%}
+     {%endfor%}
+   </div>
+    <br>
+    <hr>
    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugit quis rerum odio quisquam quibusdam quo! Cum quasi sint quis placeat, eos ab cumque reiciendis esse nostrum quaerat quidem excepturi repudiandae animi iure voluptatem necessitatibus harum ipsum ut ducimus odio perspiciatis. Provident, cupiditate a?</p>
  </div>
   <footer>
