@@ -14,10 +14,15 @@ type="text/css" href="templates/style.css">
       font-size: 2rem;
     }
     #bn{
-      /* width:90%; */
-      height:100vh;
+      width:90%;
+      /* max-width:100vw; */
+      margin:10px auto;
+      display: grid;
+      place-items: center;
     }
     .container{
+      justify-content:center;
+      align-items:center
       max-width: 100vh;
       margin:0 auto;
     }
@@ -29,11 +34,20 @@ type="text/css" href="templates/style.css">
   </style>
 </head>
 <body>
+  {%include 'nav.html' %}
+   <h1 class="text-center mt-2 mb-4"">Hello World to this {{world}} universe</h1>
+
+   <img id="bn" class="img-fluid"  src="https://tse1.mm.bing.net/th?id=OIP.Qw7vlSzRti8jmA072wvxGwHaHa&pid=Api&rs=1&c=1&qlt=95&w=118&h=118">
+   <hr>
  <div class="container">
-   <h1 class="text-center">Hello World to this {{world}} universe</h1>
-   <img id="bn" class="img-fluid" width="90%" src="https://tse1.mm.bing.net/th?id=OIP.Qw7vlSzRti8jmA072wvxGwHaHa&pid=Api&rs=1&c=1&qlt=95&w=118&h=118">
-   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, sint nihil. Quisquam recusandae ipsum deleniti, corporis, pariatur architecto animi ducimus voluptates adipisci 
-     deserunt maxime! Eos expedita laborum libero et repellat, id aliquid error illo!</p>
+   <div class="row">
+   <div class="col-md-6"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, sint nihil. Quisquam recusandae ipsum deleniti, corporis, pariatur architecto animi ducimus voluptates adipisci 
+      deserunt maxime! Eos expedita laborum libero et repellat, id aliquid error illo!</p></div>
+  
+     <div class="col-md-3 d-md-block d-none"">
+     <img src="static/annie-spratt-hCb3lIB8L8E-unsplash.jpg" style="height:320px;margin:5px;"
+     </div>
+   </div>
    <br>
    <hr>
    <h2>Job Opening</h2>
@@ -46,12 +60,6 @@ type="text/css" href="templates/style.css">
     <hr>
    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugit quis rerum odio quisquam quibusdam quo! Cum quasi sint quis placeat, eos ab cumque reiciendis esse nostrum quaerat quidem excepturi repudiandae animi iure voluptatem necessitatibus harum ipsum ut ducimus odio perspiciatis. Provident, cupiditate a?</p>
  </div>
-  <footer>
-    <div id="end">
-      <p>Copyright &copy; 2023, All rights reserved</p>
-      <label>Contact Us</label>
-    <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
-    </div>
-  </footer>
+  {% include 'footer.html' %}
 </body>
 </html>
